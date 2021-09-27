@@ -29,6 +29,8 @@ app.get("/changetitle",(req,res)=>{
     });
 })
 
+let PORT = process.env.PORT || 3000
+
 app.listen(3000,()=>{
     console.log("Listening in Port 3000");
 })
