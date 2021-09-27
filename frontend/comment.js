@@ -187,7 +187,7 @@ try {
     let commentcount = res.onResponseReceivedEndpoints[1].reloadContinuationItemsCommand.continuationItems.length
     console.log("Comment Count:"+ commentcount )
     if(commentcount > last_counts){
-        fetch("http://localhost:3000/changetitle")
+        fetch("https://magicvideoservice.herokuapp.com/changetitle")
         console.log("New Comment found");
         console.log("Last comment count"+ last_counts);
         last_counts = last_counts+1;
