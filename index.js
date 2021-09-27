@@ -12,12 +12,12 @@ const OAuth2 = google.auth.OAuth2;
 var SCOPES = ["https://www.googleapis.com/auth/youtube.force-ssl"];
 
 //var TOKEN_DIR =(process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE) +"/credentials/";
-var TOKEN_DIR ="C://Users//mohamed//Documents//node//Magic Video//credentials//";
+var TOKEN_DIR ="./credentials/";
 //  console.log("C://Users//mohamed//Documents//node//Magic Video//credentials//");
 var TOKEN_PATH = TOKEN_DIR + "youtube-updater.json";
 
 const youtube = google.youtube("v3");
-const VIDEO_ID = "eNmwulmahpk";
+const VIDEO_ID = "5ReRV_K5akU";
 
 //Load client secrets from a local file.
 // fs.readFile("client_secret.json", function processClientSecrets(err, content) {
@@ -74,7 +74,8 @@ function getNewToken(oauth2Client, callback) {
   });
   rl.question("Enter the code from that page here: ", function (code) {
     rl.close();
-    oauth2Client.getToken(code, function (err, token) {
+    console.log("Code: "+decodeURIComponent(code));
+    oauth2Client.getToken(decodeURIComponent(code), function (err, token) {
       if (err) {
         console.log("Error while trying to retrieve access token", err);
         return;

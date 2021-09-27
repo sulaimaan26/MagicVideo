@@ -11,9 +11,9 @@ module.exports=class Config {
     SCOPES = ["https://www.googleapis.com/auth/youtube.force-ssl"];
 
     //var TOKEN_DIR =(process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE) +"/credentials/";
-    TOKEN_DIR ="C://Users//mohamed//Documents//node//Magic Video//credentials//";
+    TOKEN_DIR ="./credentials/";
     TOKEN_PATH = this.TOKEN_DIR + "youtube-updater.json";
-    VIDEO_ID = "eNmwulmahpk";
+    VIDEO_ID = "5ReRV_K5akU";
 
    
 }
