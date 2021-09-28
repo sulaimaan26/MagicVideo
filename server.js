@@ -4,6 +4,7 @@ var cors = require('cors');
 var Auth = require("./config/auth");
 var Action = require("./helper/action");
 const fs = require("fs");
+var os = require('os');
 
 let VIDEO_ID = "5ReRV_K5akU";
 
@@ -30,8 +31,12 @@ app.get("/changetitle",(req,res)=>{
 })
 
 app.get("/info",(req,res)=>{
-    console.log(process.platform);
-    res.send(process.platform)
+    res.send({
+        type:os.type(),
+        release:os.release(),
+        platform:os.platform()
+    })
+
 })
 
 let PORT = process.env.PORT || 3000
