@@ -181,9 +181,9 @@ var requestOptions = {
 
 try {
     let response = await fetch("https://www.youtube.com/youtubei/v1/next?key=AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8", requestOptions)
-    console.log("Hello");
+   
     let res = await response.json()
-    
+    console.log(res);
     let commentcount = res.onResponseReceivedEndpoints[1].reloadContinuationItemsCommand.continuationItems.length
     console.log("Comment Count:"+ commentcount )
     if(commentcount > last_counts){
