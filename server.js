@@ -29,6 +29,11 @@ app.get("/changetitle",(req,res)=>{
     });
 })
 
+app.get("/info",(req,res)=>{
+    console.log(process.platform);
+    res.send(process.platform)
+})
+
 let PORT = process.env.PORT || 3000
 
 app.listen(PORT,()=>{
